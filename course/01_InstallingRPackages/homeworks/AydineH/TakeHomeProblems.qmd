@@ -1,0 +1,52 @@
+---
+title: "Take-Home Problems Week #1"
+format : html
+embed-resources : true
+toc : true
+---
+
+# Problem 1
+
+We installed PeacoQC during this session, but we didn’t have time to explore what functions are present within the package. Using what you have learned about accessing documentation, figure out and list what functions it contains
+
+Checking the index of PeacoQC() : 
+![](/course/01_InstallingRPackages/homeworks/AydineH/Images/Capture%20d%E2%80%99e%CC%81cran%202026-02-16%20a%CC%80%2014.46.33.png)
+
+The following functions are listed : 
+PeacoQC ; PeacoQCHeatmap ; PlotPeacoQC ; RemoveDoublets ; RemoveMargins
+
+I also tried 
+
+```{r}
+library(PeacoQC)
+ls("package:PeacoQC")
+```
+to list all the functions in the package. 
+
+# Problem 2
+
+There are currently 69 packages under FlowCytometry. 
+Mike Jiang seems to be a recurrent name among the top ranked packages. Greg Finak is also recurrently found. 
+immunoClust and CytoPipeline seem promising. 
+
+# Problem 3
+
+
+install the following three R packages using this newer method: “broom”, “cytoMEM”, “DillonHammill/CytoExploreR”.
+
+To install packages from CRAN or Bioconductor, or GitHub, the syntax is identical : 
+pak::pkg_install("")
+
+So for broom : 
+pak::pkg_install("broom")
+
+for CytoMEM : 
+pak::pkg_install("cytoMEM")
+
+for CytoExploreR : 
+pak::pkg_install("DillonHammill/CytoExploreR")
+(note, i was asked to install superheat first)
+
+of course, first we need to install pak using install.packages
+
+Whereas install.packages was for CRAN, install for Bioconductor and install_github for github packages. 
